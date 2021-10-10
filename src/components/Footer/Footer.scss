@@ -1,0 +1,19 @@
+@import '../../assets/default-styles/_variables.scss';
+
+.footer {
+  padding: 8px 0;
+  background-color: $background_muted;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 100px;
+    @media screen and (max-width: $media-mobile) {
+      margin: 0 16px;
+    }
+  }
+  &__buttons {
+    display: flex;
+    gap: 12px;
+  }
+}

@@ -1,0 +1,16 @@
+@import '../../assets/default-styles/_variables.scss';
+
+.footer-button {
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: 0.06px;
+  color: $color-text_muted;
+  transition-duration: 0.2s;
+  &:hover, &:focus {
+    cursor: pointer;
+  }
+  &:hover {
+    color: red;
+  }
+}

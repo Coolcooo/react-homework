@@ -1,0 +1,27 @@
+.start-screen {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hello-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  width: 264px;
+
+  &__settings-icon {
+    width: 124px;
+    height: 124px;
+    margin-bottom: 8px;
+    background-image: url('../../assets/icons/logo 3.svg');
+  }
+  &__description {
+    margin: 24px 0;
+    font-size: 13px;
+    line-height: 125%;
+    text-align: center;
+  }
+}

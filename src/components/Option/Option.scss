@@ -1,0 +1,23 @@
+@import '../../assets/default-styles/_variables.scss';
+
+
+.option {
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 0.06px;
+  margin: 12px 0;
+  &__input {
+    margin: 4px 8px 0 8px;
+    font-size: 13px;
+    line-height: 15px;
+    padding: 11px 13px 10px 13px;
+    border: 2px solid $input_focused;
+    border-radius: 4px;
+    outline: none;
+    width: 26px;
+    text-align: end;
+    &:focus {
+      border: 2px solid $cancel-color-border-pale_focused;
+    }
+  }
+}

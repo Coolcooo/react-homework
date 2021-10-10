@@ -1,0 +1,31 @@
+@import '../../assets/default-styles/_variables.scss';
+
+.settings {
+  margin: 0 100px;
+  flex: 1;
+  @media screen and (max-width: $media-mobile) {
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+  max-width: 474px;
+  &__buttons {
+    display: flex;
+    gap: 8px;
+    margin-top: 24px;
+    @media screen and (max-width: $media-mobile) {
+      flex-direction: column;
+      margin-bottom: 16px;
+    }
+  }
+  &__title {
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 20px;
+  }
+  &__description {
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 0.06px;
+    color: $color-text_muted;
+  }
+}

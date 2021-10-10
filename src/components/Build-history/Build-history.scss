@@ -1,0 +1,11 @@
+@import "../../assets/default-styles/_variables.scss";
+
+.build {
+  flex: 1;
+  &__wrapper {
+    margin: 0 100px;
+    @media screen and (max-width: $media-mobile) {
+      margin: 0 16px;
+    }
+  }
+}

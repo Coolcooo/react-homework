@@ -1,0 +1,43 @@
+@import "../../assets/default-styles/_variables.scss";
+
+
+.popup-background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $popup-background;
+  z-index: 1;
+}
+
+.popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  background-color: $popup-color;
+  padding: 20px;
+  box-shadow: 0 0 1px rgba(67, 68, 69, 0.3), 0 6px 16px rgba(67, 68, 69, 0.3);
+  border-radius: 4px;
+  right: 10%;
+  @media screen and (max-width: $media-mobile) {
+    right: -11%;
+  }
+  &__buttons {
+    display: flex;
+    gap: 10px;
+    @media screen and (max-width: $media-mobile) {
+      flex-direction: column;
+    }
+  }
+}
+.error {
+  &_on {
+    color: rgba(0, 0, 0, 1);
+  }
+  &_off {
+    color: rgba(0, 0, 0, 0);
+  }
+}

@@ -1,0 +1,150 @@
+@import '../../assets/default-styles/_variables.scss';
+
+
+.build-field {
+  padding: 12px 24px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 0 1px rgba(67, 68, 69, 0.3), 0 1px 1px rgba(67, 68, 69, 0.3);
+  border-radius: 6px;
+  cursor: pointer;
+  transition-duration: 0.2s;
+  margin-bottom: 8px;
+  @media screen and (max-width: $media-mobile) {
+    flex-wrap: wrap;
+    padding: 16px 12px;
+  }
+  &:hover {
+    box-shadow: 0 0 1px rgba(67, 68, 69, 0.3), 0 2px 8px rgba(67, 68, 69, 0.3);
+  }
+  &__description-info {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 8px;
+    @media screen and (max-width: $media-mobile) {
+      flex-direction: column;
+    }
+  }
+  &__status {
+    width: 24px;
+    margin-right: 8px;
+    background-repeat: no-repeat;
+    height: 24px;
+    background-size: 100%;
+    @media screen and (max-width: $media-mobile) {
+      height: 16px;
+      width: 16px;
+    }
+    &_done {
+      background-image: url("../../assets/icons/done_24.svg");
+    }
+    &_wait {
+      background-image: url("../../assets/icons/clock_24.svg");
+
+    }
+    &_error {
+      background-image: url("../../assets/icons/fail_24.svg");
+    }
+  }
+  &__branch-info {
+    gap: 4px;
+    display: flex;
+  }
+  &__author-info {
+    gap: 4px;
+    display: flex;
+  }
+  &__technical-info {
+    gap: 8px;
+    display: flex;
+    @media screen and (max-width: $media-mobile) {
+      flex-direction: column;
+    }
+  }
+  &__left-block {
+    display: flex;
+  }
+  &__branch-icon {
+    width: 16px;
+    opacity: 0.3;
+    height: 16px;
+    background-image: url("../../assets/icons/16_code-commit.svg");
+  }
+  &__author-icon {
+    width: 16px;
+    opacity: 0.3;
+    height: 16px;
+    background-image: url("../../assets/icons/16_user.svg");
+  }
+  &__title {
+    font-size: 15px;
+    line-height: 20px;
+  }
+  &__id {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+    @media screen and (max-width: $media-mobile) {
+      font-size: 16px;
+      line-height: 16px;
+    }
+    &_done {
+      color: $done-color;
+    }
+    &_wait {
+      color: $wait-color;
+
+    }
+    &_error {
+      color: $fail-color;
+    }
+  }
+
+  &__hash {
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 0.06px;
+    opacity: 0.65;
+  }
+  &__author,
+  &__branch {
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 0.06px;
+  }
+  &__meta-field {
+    display: flex;
+    gap: 4px;
+  }
+  &__meta-info {
+    gap: 12px;
+    display: flex;
+    flex-direction: column;
+    @media screen and (max-width: $media-mobile) {
+      flex-direction: row;
+      margin-top: 17px;
+      margin-left: 24px;
+    }
+  }
+}
+.meta-field {
+
+  &__description {
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 0.06px;
+  }
+  &__icon {
+    opacity: 0.3;
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    &_time {
+      background-image: url("../../assets/icons/16_stopwatch.svg");
+    }
+    &_date {
+      background-image: url("../../assets/icons/16_calendar.svg");
+    }
+  }
+
+}
