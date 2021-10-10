@@ -29,13 +29,16 @@ export default function Popup({ title, eventEmitter, isError, setIsError }) {
           value={hash}
           setter={setHash}
         />
-        <div className={`error error_${isError % 4 === 0 ? 'on' : 'off'}`}>
+        <div
+          className={`error error_${(isError - 1) % 4 === 0 ? 'on' : 'off'}`}
+        >
           Упс, что - то пошло не так
         </div>
         <div className="popup__buttons">
           <ApplyButton
             eventEmitter={hash ? runFail : () => {}}
-            text={'Run build'} styleType={isDisableButton ? 'disabled' : 'bright'}
+            text={'Run build'}
+            styleType={isDisableButton ? 'disabled' : 'bright'}
           />
           <ApplyButton
             eventEmitter={eventEmitter}
