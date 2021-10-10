@@ -9,7 +9,7 @@ export default function BuildField({
   time,
   branch,
   typeOfResult,
-  currentId
+  currentId,
 }) {
   return (
     <div className="build-field">

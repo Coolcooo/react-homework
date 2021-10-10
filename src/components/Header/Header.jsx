@@ -1,19 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Header.scss';
 import { useHistory } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 import SettingsButton from '../Settings-button';
 import Popup from '../Popup';
+import { updatePopup } from '../../store/features';
 
-export default function Header({ option, settings }) {
-  const [isPopup, setIsPopup] = useState();
+export default function Header({ option }) {
+  const settings = useSelector((state) => state.customer.settings);
+  const isPopup = useSelector((state) => state.customer.isPopup);
   const history = useHistory();
   const options = {};
-    const [isError, setIsError] = useState(1);
+  const dispatch = useDispatch();
 
-  const closePopup = () => {
-    console.log('sdafsadf')
-    setIsPopup(false);
-  };
   switch (option) {
     case 'settings':
       options.headerTitleColor = 'muted';
@@ -29,7 +28,7 @@ export default function Header({ option, settings }) {
           icon: 'play',
           isFullButton: true,
           eventEmitter: () => {
-            setIsPopup(true);
+            dispatch(updatePopup(true));
           },
         },
         {
@@ -83,13 +82,7 @@ export default function Header({ option, settings }) {
         </h1>
         <div className={`header__buttons`}>{buttons}</div>
       </div>
-      {isPopup && (
-        <Popup
-          isError={isError}
-          setIsError={setIsError}
-          eventEmitter={closePopup}
-        />
-      )}
+      {isPopup && <Popup title={'New build'} />}
     </header>
   );
 }
