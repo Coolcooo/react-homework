@@ -9,13 +9,12 @@ export default function Popup({ title, eventEmitter, isError, setIsError }) {
   const runFail = (e) => {
     setIsError(isError + 1);
     setIsDisableButton(true);
-    if (isError % 4 !== 0) {
-      setTimeout(() => {
-        eventEmitter(e);
-        setIsDisableButton(false);
-      }, 1000);
-    }
     setTimeout(() => {
+      if (isError + 1 !== 4) {
+        eventEmitter(e);
+      } else {
+        setIsError(0);
+      }
       setIsDisableButton(false);
     }, 1000);
   };
@@ -29,9 +28,7 @@ export default function Popup({ title, eventEmitter, isError, setIsError }) {
           value={hash}
           setter={setHash}
         />
-        <div
-          className={`error error_${(isError - 1) % 4 === 0 ? 'on' : 'off'}`}
-        >
+        <div className={`error error_${isError !== 4 ? 'off' : 'on'}`}>
           Упс, что - то пошло не так
         </div>
         <div className="popup__buttons">

@@ -1,12 +1,9 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './Build-history.scss';
 import ApplyButton from '../Apply-button';
 import BuildField from '../Build-field/Build-field';
-import Popup from '../Popup';
 
 export default function BuildHistory({ repositoryName }) {
-  // eslint-disable-next-line no-unused-vars
-  const [isOpenPopup, setIsOpenPopup] = useState(false);
   const repositories = {
     'philip1967/my-awesome-repo': [
       {
@@ -16,7 +13,7 @@ export default function BuildHistory({ repositoryName }) {
         date: '21 янв, 03:06',
         time: '1 ч 20 мин',
         branch: 'master',
-        type: 'done'
+        type: 'done',
       },
       {
         hash: '9c9f0b9',
@@ -25,7 +22,7 @@ export default function BuildHistory({ repositoryName }) {
         date: '21 янв, 03:06',
         time: '1 ч 20 мин',
         branch: 'master',
-        type: 'wait'
+        type: 'wait',
       },
       {
         hash: '9c9f0b9',
@@ -43,7 +40,7 @@ export default function BuildHistory({ repositoryName }) {
         date: '21 янв, 03:06',
         time: '1 ч 20 мин',
         branch: 'master',
-        type: 'done'
+        type: 'done',
       },
       {
         hash: '9c9f0b9',
@@ -52,7 +49,7 @@ export default function BuildHistory({ repositoryName }) {
         date: '21 янв, 03:06',
         time: '1 ч 20 мин',
         branch: 'master',
-        type: 'wait'
+        type: 'wait',
       },
       {
         hash: '9c9f0b9',
@@ -88,7 +85,6 @@ export default function BuildHistory({ repositoryName }) {
       <div className="build__wrapper">
         <div className="build__history-block">{historyFields.reverse()}</div>
         <ApplyButton text={'Show more'} styleType={'pale'} />
-        {isOpenPopup && <Popup title={'New build'} />}
       </div>
     </div>
   );

@@ -8,10 +8,9 @@ export default function Header({ option, settings }) {
   const [isPopup, setIsPopup] = useState();
   const history = useHistory();
   const options = {};
-    const [isError, setIsError] = useState(1);
+  const [isError, setIsError] = useState(1);
 
   const closePopup = () => {
-    console.log('sdafsadf')
     setIsPopup(false);
   };
   switch (option) {
@@ -88,6 +87,7 @@ export default function Header({ option, settings }) {
           isError={isError}
           setIsError={setIsError}
           eventEmitter={closePopup}
+          title={'New build'}
         />
       )}
     </header>
