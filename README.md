@@ -1,5 +1,6 @@
 # Getting Started with Create React App
-Для установки все зависимостей введите `yarn install`
+Для установки всех зависимостей введите `yarn install`
+Для воспроизведения ошибки хеша, запустите его 4-5 раз
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
